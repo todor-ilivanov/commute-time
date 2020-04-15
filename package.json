@@ -1,0 +1,33 @@
+{
+  "name": "commute-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/sheets.js",
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly && babel src --out-dir lib --extensions \".ts,.tsx\"",
+    "start": "npm run build && node lib/sheets.js",
+    "clean": "rimraf lib",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^2.5.3",
+    "@types/node": "^13.11.1",
+    "core-js": "^3.6.5",
+    "google-spreadsheet": "^3.0.11",
+    "googleapis": "^39.2.0",
+    "regenerator-runtime": "^0.13.5",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.5",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-typescript": "^7.9.0",
+    "typescript": "^3.8.3"
+  }
+}
